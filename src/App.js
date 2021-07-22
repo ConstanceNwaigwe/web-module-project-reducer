@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 
 import './App.css';
 
 import TotalDisplay from './components/TotalDisplay';
 import CalcButton from './components/CalcButton';
 
+import {addOne, applyNumber, changeOperation, clearDisplay} from './actions/index';
+
 function App() {
+  const [state, dispatch] = useReducer()
+
+  /*const handleaddOne = () => {
+    dispatch(addOne(1))
+  }*/
+  const handleApplynum = (num) => {
+    dispatch(applyNumber(num))
+  }
+
+  const handleOperator = (operator) => {
+    dispatch(changeOperation(operator))
+  }
+
+  const handleclear = () => {
+    dispatch(clearDisplay())
+  }
 
   return (
     <div className="App">
@@ -24,13 +42,13 @@ function App() {
             </div>
             
             <div className="row">
-              <CalcButton value={"M+"}/>
-              <CalcButton value={"MR"}/>
-              <CalcButton value={"MC"}/>
+              <CalcButton value={"M+"} onClick={handleOperator("M+")}/>
+              <CalcButton value={"MR"} onClick={handleOperator("MR")}/>
+              <CalcButton value={"MC"} onClick={handleOperator("MC")}/>
             </div>
 
             <div className="row">
-              <CalcButton value={1}/>
+              <CalcButton value={1} onClick={handleApplynum(1)}/>
               <CalcButton value={2}/>
               <CalcButton value={3}/>
             </div>
@@ -48,13 +66,13 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={"+"}/>
-              <CalcButton value={"*"}/>
-              <CalcButton value={"-"}/>
+              <CalcButton value={"+"} onClick={handleOperator("+")}/>
+              <CalcButton value={"*"} onClick={handleOperator("*")}/>
+              <CalcButton value={"-"} onClick={handleOperator("-")}/>
             </div>
 
             <div className="row ce_button">
-              <CalcButton value={"CE"}/>
+              <CalcButton value={"CE"} onClick={handleclear}/>
             </div>
 
           </form>
