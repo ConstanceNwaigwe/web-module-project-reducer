@@ -16,6 +16,12 @@ const calculateResult = (num1, num2, operation) => {
             return num1 - num2;
         case("CE"):
             return 0;
+        case("M+"):
+            return num1;
+        case("MR"):
+            return num1;
+        case("MC"):
+            return 0;
     }
 }
 
