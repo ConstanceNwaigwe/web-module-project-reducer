@@ -10,6 +10,7 @@ import { addOne } from './actions';
 import { applyNumber } from './actions';
 import { changeOperation } from './actions';
 import { clearDisplay } from './actions';
+import { mMemory, mrMemory, mcMemory } from './actions';
 
 
 
@@ -33,9 +34,9 @@ function App() {
             </div>
             
             <div className="row">
-              <CalcButton value={"M+"}/>
-              <CalcButton value={"MR"}/>
-              <CalcButton value={"MC"}/>
+              <CalcButton onClick={() => dispatch(mMemory())} value={"M+"}/>
+              <CalcButton onClick={() => dispatch(mrMemory())} value={"MR"}/>
+              <CalcButton onClick={() => dispatch(mcMemory())} value={"MC"}/>
             </div>
 
             <div className="row">
