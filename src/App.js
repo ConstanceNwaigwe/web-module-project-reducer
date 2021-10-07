@@ -6,7 +6,7 @@ import TotalDisplay from './components/TotalDisplay';
 import CalcButton from './components/CalcButton';
 import { initialState } from './reducers';
 import reducer from './reducers';
-import { addOne } from './actions';
+//import { addOne } from './actions';
 import { applyNumber } from './actions';
 import { changeOperation } from './actions';
 import { clearDisplay } from './actions';
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
-        <a className="navbar-brand" href="#"><img width="40px" src="./Lambda-Logo-Red.png"/> Lambda Reducer Challenge</a>
+        <a className="navbar-brand" href=".App"><img width="40px" src="./Lambda-Logo-Red.png" alt="./Lambda-Logo-Red.png"/> Lambda Reducer Challenge</a>
       </nav>
 
       <div className = "container row mt-5">
