@@ -1,3 +1,5 @@
+
+//Export variables that will be used in the reducer file
 export const ADD_ONE = "ADD_ONE";
 
 export const APPLY_NUMBER = "APPLY_NUMBER";
@@ -8,6 +10,8 @@ export const M_MEMORY = "M_MEMORY";
 export const MR_MEMORY = "MR_MEMORY";
 export const MC_MEMORY = "MC_MEMORY";
 
+
+//Export functions that return an object
 export const addOne = () => {
     return({type:ADD_ONE});
 }

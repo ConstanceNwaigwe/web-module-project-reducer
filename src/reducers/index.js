@@ -1,3 +1,5 @@
+
+//import variables from action file
 import { ADD_ONE, APPLY_NUMBER, CHANGE_OPERATION, CLEAR_DISPLAY, M_MEMORY, MR_MEMORY, MC_MEMORY } from './../actions';
 
 export const initialState = {
@@ -6,6 +8,7 @@ export const initialState = {
     memory: 0
 }
 
+//Function that return the sum of two numbers based on the operation sign
 const calculateResult = (num1, num2, operation) => {
     switch(operation) {
         case("+"):
@@ -19,6 +22,8 @@ const calculateResult = (num1, num2, operation) => {
     }
 }
 
+
+//function that takes in the action type created in action file
 const reducer = (state, action) => {
     switch(action.type) {
         case(ADD_ONE):
